@@ -13,7 +13,7 @@ app = Flask(__name__)
 db = SQLAlchemy(app)
 # L'url deve indicare esattamente il punto dove abbiamo creato il db
 # tramite l'app Users.
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../../site.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../site.db'
 migrate = Migrate(app, db)
 api = Api(app, version='1.0', title='Sample Questionari_Insert API',
     description='API')
